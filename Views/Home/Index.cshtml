@@ -2,7 +2,40 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container text-center my-4">
+    <!-- Container da imagem com tamanho controlado -->
+    <div class="logo-wrapper" style="width: 150px; margin: 0 auto;">
+        <img src="~/fundo.ico" 
+             alt="Logo" 
+             class="img-fluid logo-image"
+             style="max-width: 100%; height: auto;"
+             onerror="this.src='https://via.placeholder.com/150x50/4e73df/ffffff?text=Logo'">
+    </div>
+
+    <div class="welcome-message mt-3">
+        <h1 class="display-5">Welcome</h1>
+        <p class="lead" style="font-size: 1.1rem;">
+            <i class="fas fa-cogs"></i> Soluções Inteligentes para Gestão de Produtos
+        </p>
+    </div>
 </div>
+
+<!-- Adicione no seu _Layout.cshtml -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+    /* Estilos adicionais para controle preciso */
+    .logo-image {
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .logo-image:hover {
+        transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
+    }
+    
+    .welcome-message {
+        margin-top: 1rem;
+    }
+</style>

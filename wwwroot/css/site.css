@@ -1,18 +1,26 @@
-html {
-  font-size: 14px;
+/* Estilo para o cabeçalho com imagem pequena e transparente */
+.transparent-logo-container {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.transparent-logo {
+    width: 150px; /* Tamanho da imagem */
+    height: auto;
+    opacity: 0.8; /* Transparência (0.0 a 1.0) */
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease; /* Efeito de transição suave */
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.transparent-logo:hover {
+    opacity: 1; /* Remove um pouco da transparência ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom leve */
 }
 
-body {
-  margin-bottom: 60px;
+.welcome-text {
+    margin-top: 1rem;
+    color: #333; /* Cor do texto */
 }
