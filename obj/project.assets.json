@@ -3222,11 +3222,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cleir\\Desktop\\ProductManagementSystem\\ProductManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\cleir\\Documents\\GitHub\\ProductManagementSystem\\ProductManagementSystem.csproj",
       "projectName": "ProductManagementSystem",
-      "projectPath": "C:\\Users\\cleir\\Desktop\\ProductManagementSystem\\ProductManagementSystem.csproj",
+      "projectPath": "C:\\Users\\cleir\\Documents\\GitHub\\ProductManagementSystem\\ProductManagementSystem.csproj",
       "packagesPath": "C:\\Users\\cleir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cleir\\Desktop\\ProductManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\cleir\\Documents\\GitHub\\ProductManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cleir\\AppData\\Roaming\\NuGet\\NuGet.Config"
