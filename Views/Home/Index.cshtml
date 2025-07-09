@@ -2,40 +2,137 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container text-center my-4">
-    <!-- Container da imagem com tamanho controlado -->
-    <div class="logo-wrapper" style="width: 150px; margin: 0 auto;">
-        <img src="~/fundo.ico" 
-             alt="Logo" 
-             class="img-fluid logo-image"
-             style="max-width: 100%; height: auto;"
-             onerror="this.src='https://via.placeholder.com/150x50/4e73df/ffffff?text=Logo'">
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            /* Paleta de cores profissional */
+            --primary: #2b6cb0;    /* Azul corporativo */
+            --secondary: #4299e1;  /* Azul mais claro */
+            --accent: #f6ad55;     /* Destaque âmbar */
+            --light: #f7fafc;      /* Branco suave */
+            --dark: #2d3748;       /* Cinza escuro */
+        }
+
+        body {
+            background-color: var(--light);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Imagem de fundo da empresa */
+        .company-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.08; /* Opacidade bem baixa */
+            z-index: 0;
+            max-width: 80%;
+            max-height: 80%;
+            filter: grayscale(80%) brightness(1.1);
+        }
+
+        /* Container principal */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Card de conteúdo */
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            margin-top: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Logo/Header */
+        .logo-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-img {
+            height: 250px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Textos */
+        .welcome-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .welcome-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .lead-text {
+            color: var(--dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Rodapé único */
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--dark);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagem de fundo da empresa -->
+    <img src="~/fundo.png" alt="Background" class="company-bg">
+
+    <div class="main-container">
+        <div class="logo-header">
+            <img src="~/fundo.png" 
+                 alt="Logo" 
+                 class="logo-img"
+                 onerror="this.style.display='none'">
+        </div>
+
+        <div class="content-box text-center">
+            <h1 class="welcome-title">Welcome</h1>
+            <p class="lead-text">
+                <i class="fas fa-circle" style="color: var(--accent); font-size: 0.5rem; vertical-align: middle;"></i>
+                Soluções Inteligentes para Gestão de Produtos
+            </p>
+        </div>
+
+        @* <!-- Rodapé único -->
+        <div class="footer">
+            © 2025 - ProductManagementSystem - Privacy
+        </div> *@
     </div>
-
-    <div class="welcome-message mt-3">
-        <h1 class="display-5">Welcome</h1>
-        <p class="lead" style="font-size: 1.1rem;">
-            <i class="fas fa-cogs"></i> Soluções Inteligentes para Gestão de Produtos
-        </p>
-    </div>
-</div>
-
-<!-- Adicione no seu _Layout.cshtml -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-<style>
-    /* Estilos adicionais para controle preciso */
-    .logo-image {
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .logo-image:hover {
-        transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
-    }
-    
-    .welcome-message {
-        margin-top: 1rem;
-    }
-</style>
+</body>
+</html>
